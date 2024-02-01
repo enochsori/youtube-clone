@@ -4,6 +4,7 @@ import { FaSpinner } from 'react-icons/fa6';
 import { BiError } from 'react-icons/bi';
 import VideoCard from '../components/VideoCard';
 import useYoutubeApi from '../context/YoutubeApiContext';
+import { useEffect } from 'react';
 
 export default function Videos() {
   const { keyword } = useParams();
@@ -19,6 +20,8 @@ export default function Videos() {
       return youtube.search(keyword);
     },
   });
+
+  useEffect(() => {}, [keyword]);
 
   return (
     <>
