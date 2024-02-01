@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom';
 import { FaSpinner } from 'react-icons/fa6';
 import { BiError } from 'react-icons/bi';
 import VideoCard from '../components/VideoCard';
-import axios from 'axios';
+import useYoutubeApi from '../context/YoutubeApiContext';
 
 export default function Videos() {
   const { keyword } = useParams();
+  const { youtube } = useYoutubeApi();
 
   const {
     isLoading,
@@ -14,10 +15,8 @@ export default function Videos() {
     data: videos,
   } = useQuery({
     queryKey: ['videos', keyword],
-    queryFn: async () => {
-      return axios
-        .get(`/videos/${keyword ? 'search' : 'popular'}.json`)
-        .then((res) => res.data.items);
+    queryFn: () => {
+      return youtube.search(keyword);
     },
   });
 
