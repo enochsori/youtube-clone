@@ -9,6 +9,13 @@ export default class Youtube {
     return keyword ? this.#searchByKeyword(keyword) : this.#mostPopular();
   }
 
+  async channelImageURL(id: string) {
+    console.log(id);
+    return this.apiClient
+      .channels({ params: { part: 'snippet', id } })
+      .then((res) => res.data.items[0].snippet.thumbnails.default.url);
+  }
+
   async #searchByKeyword(keyword: string) {
     return this.apiClient
       .search({
