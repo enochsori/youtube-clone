@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# YouTube Clone Coding Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a YouTube clone built using React, React Router, React Query, Tailwind CSS, and TypeScript.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Latest popular video list: Fetches and displays a list of the latest popular videos.
+- Keyword search: Allows users to search for videos based on keywords and displays the search results.
+- Video details: Shows detailed information about the selected video.
 
-## Expanding the ESLint configuration
+## APIs Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Latest popular video list: [https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=[YOUR_API_KEY]]
+- Keyword search: [https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=[YOUR_API_KEY]]
+- Video details: [https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=[YOUR_API_KEY]]
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository: `git clone [repository URL]`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
