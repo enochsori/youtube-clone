@@ -26,7 +26,6 @@ export default function Videos() {
 
   return (
     <>
-      <div className='text-lg'>Videos : {keyword ? keyword : 'hot videos'}</div>
       {isLoading && <FaSpinner className='text-4xl' />}
       {error && <BiError />}
       {videos && (

@@ -1,6 +1,16 @@
 # YouTube Clone Coding Project
 
+---
+
 This project is a YouTube clone built using React, React Router, React Query, Tailwind CSS, and TypeScript.
+
+## Homepage(with hot videos):
+
+![homepage screenshot](./public/images/video-page.png)
+
+### Video page:
+
+![Video screenshot](./public/images/video-page.png)
 
 ## Features
 

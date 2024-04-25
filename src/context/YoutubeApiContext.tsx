@@ -3,7 +3,7 @@ import Youtube from '../api/youtube';
 // import YoutubeClient from '../api/youtubeClient';
 import FakeYoutubeClient from '../api/fakeYoutubeClient';
 
-export const YoutubeApiContext = createContext();
+export const YoutubeApiContext = createContext(null);
 
 // const client = new YoutubeClient();
 const client = new FakeYoutubeClient();
