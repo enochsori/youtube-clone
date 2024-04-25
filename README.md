@@ -6,7 +6,7 @@ This project is a YouTube clone built using React, React Router, React Query, Ta
 
 ## Homepage(with hot videos):
 
-![homepage screenshot](./public/images/video-page.png)
+![homepage screenshot](./public/images/home-hot-videos.png)
 
 ### Video page:
 
